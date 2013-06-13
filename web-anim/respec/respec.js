@@ -851,7 +851,7 @@ berjon.respec.prototype = {
             }
             header +=
                 "<h2>" + (this.specStatus == "unofficial" ? "" : "W3C ") + 
-                this.status2text[this.specStatus] + " " + this._humanDate(this.publishDate) + "</h2><dl>";
+                this.status2long[this.specStatus] + " " + this._humanDate(this.publishDate) + "</h2><dl>";
         }
         if (!this.isNoTrack) {
             header += "<dt>This version:</dt><dd><a href='" + thisVersion + "'>" + thisVersion + "</a></dd>" + 
