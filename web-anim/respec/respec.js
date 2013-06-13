@@ -314,6 +314,10 @@ berjon.respec.prototype = {
             str += " PUBLIC '" + dt.publicId + "' '" + dt.systemId + "'";
         }
         str += ">\n";
+        // HACK: Get this in here so it doesn't muck up the doc before
+        // export
+        str += "<script src='../shared/MathJax/MathJax.js?config=MML_SVGorMML,local/local' type='text/javascript'></script>"
+        // end HACK
         str += "<html";
         var ats = document.documentElement.attributes;
         var prefixAtr = '' ;

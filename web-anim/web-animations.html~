@@ -6555,7 +6555,7 @@ interface <span class="idlInterfaceID">Animation</span> : <span class="idlSuperc
                   </dl>
                 </li>
                 <li>Return a new <a href="#dfn-animation" class="internalDFN">Animation</a> object created by
-                    calling the <a href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                    calling the <a href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                     constructor</a> with parameters
                     <code>Animation(<var>source</var>.target, <var>cloned
                     effect</var>, <var>cloned timing</var>)</code>.</li>
@@ -7274,12 +7274,12 @@ elem<span class="sh_symbol">.</span>ownerDocument<span class="sh_symbol">.</span
             
           <table class="parameters"><tr><th>Parameter</th><th>Type</th><th>Nullable</th><th>Optional</th><th>Description</th></tr><tr><td class="prmName">effect</td><td class="prmType"><code>(<a href="#idl-def-AnimationEffect" class="idlType"><code>AnimationEffect</code></a> or <a href="#idl-def-CustomEffect" class="idlType"><code>CustomEffect</code></a> or <a href="#idl-def-OneOrMoreKeyframes" class="idlType"><code>OneOrMoreKeyframes</code></a>)</code></td><td class="prmNullTrue">&#x2714;</td><td class="prmOpt prmOptFalse">&#x2718;</td><td class="prmDesc">
                 The effect to apply.
-                This value is passed to the <a href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                This value is passed to the <a href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                 constructor</a> as the <var>effect</var> parameter and has the
                 same interpretation as defined for that constructor.
               </td></tr><tr><td class="prmName">timing</td><td class="prmType"><code>(<a>double</a> or <a href="#idl-def-TimingInput" class="idlType"><code>TimingInput</code></a>)</code></td><td class="prmNullTrue">&#x2714;</td><td class="prmOpt"><span class="prmOptTrue">&#x2714;</span> (<code>null</code>)</td><td class="prmDesc">
                 The timing parameters of the animation.
-                This value is passed to the <a href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                This value is passed to the <a href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                 constructor</a> as the <var>timing</var> parameter and has the
                 same interpretation as defined for that constructor.
               </td></tr></table><div><em>Return type: </em><code><a href="#idl-def-Animation" class="idlType"><code>Animation</code></a></code></div></dd><dt id="widl-Element-getCurrentAnimations-sequence-Animation"><code>getCurrentAnimations</code></dt><dd>
@@ -7410,7 +7410,7 @@ anim<span class="sh_symbol">.</span>player<span class="sh_symbol">.</span>curren
           </li>
           <li>
             <p>
-              Changes to the model other than <a href="#seeking-a-timed-item">seek operations</a> do not cause
+              Changes to the model other than <a title="seeking" href="#dfn-seeking" class="internalDFN">seek operations</a> do not cause
               <a href="#timing-events">timing events</a> to be queued
               immediately.
               Instead, such events are queued upon the next sample as defined
