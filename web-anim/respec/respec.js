@@ -2703,7 +2703,7 @@ berjon.WebIDLProcessor.prototype = {
         else if (obj.type == "enum") {
 			var enm = [];
 			for (var i = 0; i < obj.children.length; i++) {
-				enm.push('<a href="#widl-' + id(obj.refId) + '-' + id(obj.children[i].refId) + '">' + obj.children[i].value + '</a>');
+				enm.push('<a href="#widl-' + obj.refId + '-' + obj.children[i].refId + '">' + obj.children[i].value + '</a>');
 			};
             return  "<span class='idlEnum' id='idl-def-" + id(obj.refId) + "'>enum <span class='idlEnumName'>" + 
                     obj.id +
