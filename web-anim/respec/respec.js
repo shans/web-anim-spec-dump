@@ -314,10 +314,6 @@ berjon.respec.prototype = {
             str += " PUBLIC '" + dt.publicId + "' '" + dt.systemId + "'";
         }
         str += ">\n";
-        // HACK: Get this in here so it doesn't muck up the doc before
-        // export
-        str += "<script src='../shared/MathJax/MathJax.js?config=MML_SVGorMML,local/local' type='text/javascript'></script>"
-        // end HACK
         str += "<html";
         var ats = document.documentElement.attributes;
         var prefixAtr = '' ;
@@ -343,7 +339,14 @@ berjon.respec.prototype = {
         }
 
         str += ">\n";
-        str += document.documentElement.innerHTML;
+        var restOfDoc = document.documentElement.innerHTML;
+        var endOfHead = restOfDoc.indexOf(">") + 1;
+        str += restOfDoc.substring(0, endOfHead);
+        // HACK: Get this in here so it doesn't muck up the doc before
+        // export
+        str += "<script src='../shared/MathJax/MathJax.js?config=MML_SVGorMML,local/local' type='text/javascript'></script>"
+        // end HACK
+        str += restOfDoc.substring(endOfHead);
         str += "</html>";
         return str;
     },

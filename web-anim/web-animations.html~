@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<script src='../shared/MathJax/MathJax.js?config=MML_SVGorMML,local/local' type='text/javascript'></script><html lang="en" dir="ltr">
+<html lang="en" dir="ltr">
+<script src='../shared/MathJax/MathJax.js?config=MML_SVGorMML,local/local' type='text/javascript'></script>
 <head>
     <title>Web Animations 1.0</title>
     <meta charset="utf-8">
