@@ -627,7 +627,7 @@ berjon.respec.prototype = {
             css = "https://www.w3.org/StyleSheets/TR/base";
         }
         else {
-            css = "https://www.w3.org/StyleSheets/TR/W3C-" + statStyle;// + ".css";
+            css = "http://www.w3.org/StyleSheets/TR/W3C-" + statStyle;// + ".css";
         }
         this._insertCSS(css, false);
     },
@@ -1067,7 +1067,7 @@ berjon.respec.prototype = {
                                                  this._humanDate(this.crEnd) + ".";
             sotd += " All feedback is welcome.</p>";
             if (this.specStatus != "REC") {
-                sotd += "<p>Publication as " + art + this.status2text[this.specStatus] + " does not imply endorsement by the W3C Membership. " +
+                sotd += "<p>Publication as " + art + this.status2long[this.specStatus] + " does not imply endorsement by the W3C Membership. " +
                     "This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate " +
                     "to cite this document as other than work in progress.</p>";
             }
