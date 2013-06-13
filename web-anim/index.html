@@ -6971,7 +6971,7 @@ interface Duration {
                 </li>
                 <li>Return a new <a>Animation</a> object created by
                     calling the <a
-                    href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                    href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                     constructor</a> with parameters
                     <code>Animation(<var>source</var>.target, <var>cloned
                     effect</var>, <var>cloned timing</var>)</code>.</li>
@@ -7783,7 +7783,7 @@ new SeqGroup(
               <dd>
                 The effect to apply.
                 This value is passed to the <a
-                href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                 constructor</a> as the <var>effect</var> parameter and has the
                 same interpretation as defined for that constructor.
               </dd>
@@ -7791,7 +7791,7 @@ new SeqGroup(
               <dd>
                 The timing parameters of the animation.
                 This value is passed to the <a
-                href="#widl-ctor-Animation--AnimationTarget-element-object-effect--double-or-TimingInput--timing">Animation
+                href="#widl-ctor-Animation--AnimationTarget-element--AnimationEffect-or-CustomEffect-or-OneOrMoreKeyframes--effect--unrestricted-double-or-TimingInput--timing">Animation
                 constructor</a> as the <var>timing</var> parameter and has the
                 same interpretation as defined for that constructor.
               </dd>
@@ -7942,7 +7942,7 @@ new SeqGroup(
           <li>
             <p>
               Changes to the model other than <a
-              href="#seeking-a-timed-item">seek operations</a> do not cause
+              title="seeking">seek operations</a> do not cause
               <a href="#timing-events">timing events</a> to be queued
               immediately.
               Instead, such events are queued upon the next sample as defined
